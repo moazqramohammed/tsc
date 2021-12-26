@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #002748;
+  box-shadow: 0px 1px 9px black;
+  height: 100px;
+  display: flex;
+  h1 {
+    width: 380px;
+    height: 90px;
+    padding-top: 20px;
+    position: relative;
+    text-align: right;
+    color: #002748;
+    span {
+      &:first-of-type {
+        font-size: xx-large;
+      }
+      &:last-of-type {
+        font-size: x-large;
+      }
+    }
+    img {
+      &:last-of-type {
+        position: absolute;
+        left: -5px;
+        top: 0;
+        height: 168px;
+        z-index: -1;
+      }
+      &:first-of-type {
+        position: absolute;
+        left: 30px;
+        top: 77px;
+        height: 70px;
+      }
+    }
+  }
+  > ul {
+    display: flex;
+    padding: 0 50px;
+    align-items: stretch;
+    list-style: none;
+    flex: 1;
+    li {
+      span,
+      a {
+        display: block;
+        font-size: xx-large;
+        color: #fff;
+        padding: 20px;
+        text-decoration: none;
+        height: 100%;
+      }
+    }
+  }
+  .whatsapp {
+    width: 60px;
+    position: fixed;
+    left: 40px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    flex-direction: column-reverse;
+    height: initial;
+    position: relative;
+    background: initial;
+    box-shadow: initial;
+    h1 {
+      background-color: white;
+      line-height: initial;
+      padding: 50px 0;
+      width: initial;
+      height: auto;
+      text-align: center;
+      img {
+        left: 30px !important;
+        top: 105px !important;
+        height: 75px !important;
+        z-index: 1 !important;
+      }
+      span {
+        &:last-of-type {
+          font-size: large;
+          width: 348px;
+          margin: auto;
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+    ul {
+      padding-top: 0;
+      background: #002748;
+      justify-content: space-evenly;
+      li {
+        span,
+        a {
+          padding: 20px 0;
+          font-size: large;
+        }
+      }
+    }
+    & > span {
+      font-size: x-large;
+      text-decoration: underline;
+      text-align: center;
+      padding: 15px 0;
+    }
+  }
+  .upArrow {
+    width: 60px;
+    height: auto;
+    position: fixed;
+    color: #002748;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.8;
+  }
+  .whatsapp {
+    width: 80px !important;
+    left: 10px !important;
+    bottom: 10px !important;
+  }
+}

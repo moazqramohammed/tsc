@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85.317" height="90.317" viewBox="0 0 85.317 90.317">
+  <defs>
+    <filter id="Path_2" x="0" y="0" width="85.317" height="90.317" filterUnits="userSpaceOnUse">
+      <feOffset dy="14" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.49"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="whatsapp" transform="translate(9)">
+    <g transform="matrix(1, 0, 0, 1, -9, 0)" filter="url(#Path_2)">
+      <path id="Path_2-2" data-name="Path 2" d="M0,67.317,4.643,50.488A33.479,33.479,0,0,1,33.542,0C52,0,67.317,15.088,67.317,33.426S52,67.317,33.542,67.317a33.788,33.788,0,0,1-16.365-4.643Z" transform="translate(9)" fill="#ededed"/>
+    </g>
+    <path id="Path_3" data-name="Path 3" d="M56.441,94.974l1.045.58a27.557,27.557,0,0,0,14.508,4.294A28.137,28.137,0,0,0,99.849,71.761a27.856,27.856,0,0,0-55.711,0,28.116,28.116,0,0,0,4.294,14.972l.7,1.045-2.669,9.749Z" transform="translate(-38.335 -38.335)" fill="#162870"/>
+    <path id="Path_4" data-name="Path 4" d="M137.261,135.178l-2.205-.116a2.636,2.636,0,0,0-1.857.7,9.616,9.616,0,0,0-3.25,4.991c-.812,3.482.464,7.66,3.482,11.838A35.173,35.173,0,0,0,152.466,166.4a9.429,9.429,0,0,0,7.892-.928,6.848,6.848,0,0,0,3.018-4.41l.348-1.625a1.167,1.167,0,0,0-.58-1.277l-7.312-3.366a1.107,1.107,0,0,0-1.393.348l-2.9,3.714a.9.9,0,0,1-.929.232,22.556,22.556,0,0,1-12.187-10.446.876.876,0,0,1,.116-.928l2.786-3.134a1.43,1.43,0,0,0,.232-1.161l-3.366-7.544a1.011,1.011,0,0,0-.929-.7" transform="translate(-112.656 -117.304)" fill="#fefefe"/>
+  </g>
+</svg>

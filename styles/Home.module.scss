@@ -1,0 +1,41 @@
+.main {
+  h2 {
+    color: #002748;
+    text-align: center;
+    font-size: xxx-large;
+    margin-bottom: 100px;
+    span {
+      transition: 0.5s;
+      position: relative;
+      padding-bottom: 16px;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        width: 40%;
+        height: 5px;
+        background-color: #002748;
+
+        transition: 0.5s;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main {
+    h2 {
+      font-size: xx-large;
+    }
+  }
+}
