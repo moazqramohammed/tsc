@@ -18,16 +18,24 @@ const MainFooter = ({ content, pages }) => {
       <ul>
         <li>خدماتنا</li>
         <li>
-          <a href='/services#BT'>نقل البترول</a>
+          <Link href='/services#BT'>
+            <a>نقل البترول</a>
+          </Link>
         </li>
         <li>
-          <a href='/services#ST'>نقل الاسمنت</a>
+          <Link href='/services#ST'>
+            <a>نقل الاسمنت</a>
+          </Link>
         </li>
         <li>
-          <a href='/services#GT'>نقل البضائع</a>
+          <Link href='/services#GT'>
+            <a>نقل البضائع</a>
+          </Link>
         </li>
         <li>
-          <a href='/services#RMT'>نقل المواد الاولیة</a>
+          <Link href='/services#RMT'>
+            <a>نقل المواد الاولیة</a>
+          </Link>
         </li>
       </ul>
 
