@@ -1,11 +1,12 @@
 .header {
-  position: fixed;
   width: 100%;
   background-color: #002748;
   box-shadow: 0px 1px 9px black;
   height: 100px;
   display: flex;
+
   h1 {
+    z-index: 1;
     width: 380px;
     height: 90px;
     padding-top: 20px;
@@ -23,7 +24,7 @@
     img {
       &:last-of-type {
         position: absolute;
-        left: -5px;
+        left: -0px;
         top: 0;
         height: 168px;
         z-index: -1;
@@ -59,7 +60,48 @@
     position: fixed;
     left: 40px;
     bottom: 20px;
+    z-index: 5;
   }
+  .upArrow {
+    width: 60px;
+    height: auto;
+    position: fixed;
+    color: #002748;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.8;
+    z-index: 5;
+  }
+  // .scrollNav {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   height: 70px;
+  //   width: 100%;
+  //   z-index: 1;
+  //   background-color: #002748;
+  //   transition: 0.5s;
+  //   transform: translateY(-100%);
+  //   ul {
+  //     width: 80%;
+  //     margin: auto;
+  //     list-style: none;
+  //     display: flex;
+  //     height: 100%;
+  //     align-items: stretch;
+  //     li {
+  //       a {
+  //         display: inline-block;
+  //         height: 100%;
+  //         color: white;
+  //         padding: 0 20px;
+  //         font-size: x-large;
+  //         line-height: 70px;
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (max-width: 900px) {
@@ -77,7 +119,8 @@
       height: auto;
       text-align: center;
       img {
-        left: 30px !important;
+        left: 50% !important;
+        transform: translatex(-120%);
         top: 105px !important;
         height: 75px !important;
         z-index: 1 !important;
@@ -111,15 +154,7 @@
       padding: 15px 0;
     }
   }
-  .upArrow {
-    width: 60px;
-    height: auto;
-    position: fixed;
-    color: #002748;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0.8;
-  }
+
   .whatsapp {
     width: 80px !important;
     left: 10px !important;

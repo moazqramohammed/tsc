@@ -16,9 +16,9 @@
 }
 .frontView {
   display: flex;
-  padding-top: 100px;
+  height: 90vh;
   flex-direction: row-reverse;
-  height: 100vh;
+  box-shadow: 0 10px 10px -8px black;
   div {
     &:first-of-type {
       max-height: 90vh;

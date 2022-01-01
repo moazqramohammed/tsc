@@ -2,7 +2,7 @@
   h2 {
     color: #002748;
     text-align: center;
-    font-size: xxx-large;
+    font-size: xx-large;
     margin-bottom: 100px;
     span {
       transition: 0.5s;
@@ -35,7 +35,6 @@
 @media screen and (max-width: 450px) {
   .main {
     h2 {
-      font-size: xx-large;
     }
   }
 }

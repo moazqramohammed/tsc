@@ -7,7 +7,7 @@ export default function FrontView() {
       <div></div>
       <div>
         <p>
-          مؤسست <span>الخطوط الأرضية</span>
+          مؤسسة <span>الخطوط الأرضية</span>
           <br />
           للخدمات <span>اللوجستية</span>
           <br />
