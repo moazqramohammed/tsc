@@ -66,11 +66,15 @@
     width: 60px;
     height: auto;
     position: fixed;
-    color: #002748;
+    color: white;
+    background: #162870;
+    border-radius: 50px;
+    padding: 10px;
     bottom: 20px;
     right: 20px;
-    opacity: 0.8;
     z-index: 5;
+    box-shadow: 5px 10px 7px -2px #0000008a;
+    cursor: pointer;
   }
   // .scrollNav {
   //   position: fixed;
@@ -125,6 +129,7 @@
         height: 75px !important;
         z-index: 1 !important;
       }
+
       span {
         &:last-of-type {
           font-size: large;

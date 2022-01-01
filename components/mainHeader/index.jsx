@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
-export default function MainHeader() {
+export default function MainHeader({ NotMain, page }) {
   const [mobile, setmobile] = useState(false);
   const [showUpArrow, setShowUpArrow] = useState(false);
   // const scrollNav = useRef(null);
@@ -37,21 +37,56 @@ export default function MainHeader() {
 
   return (
     <header className={styles.header}>
-      {mobile && <span>تواصل معنا عبر واتساب</span>}
+      {mobile && !NotMain && <span>تواصل معنا عبر واتساب</span>}
       <ul>
-        <li>
-          <Link href={"/"}>
-            <a>خدماتنا</a>
-          </Link>
-        </li>
-        <li>
-          <span>/</span>
-        </li>
-        <li>
-          <Link href={"/"}>
-            <a>اطلب شاحنة</a>
-          </Link>
-        </li>
+        {page ? (
+          page === "services" ? (
+            <>
+              <li>
+                <Link href={"/"}>
+                  <a>الرئيسية</a>
+                </Link>
+              </li>
+              <li>
+                <span>/</span>
+              </li>
+              <li>
+                <Link href={"/order_truck"}>
+                  <a>اطلب شاحنة</a>
+                </Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link href={"/"}>
+                  <a>الرئيسية</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/services"}>
+                  <a>خدماتنا</a>
+                </Link>
+              </li>
+            </>
+          )
+        ) : (
+          <>
+            <li>
+              <Link href={"/services"}>
+                <a>خدماتنا</a>
+              </Link>
+            </li>
+            <li>
+              <span>/</span>
+            </li>
+            <li>
+              <Link href={"/order_truck"}>
+                <a>اطلب شاحنة</a>
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
       <h1>
         <span>مؤسسة الخطوط الأرضية</span> <span>للخدمات اللوجستية</span>
@@ -59,10 +94,10 @@ export default function MainHeader() {
           src='/images/logo_without_map.png'
           alt='لوغو مؤسست الخطوط الأرضية للخدمات اللوجستية '
         />
-        {!mobile && <img src='/images/header_image.svg' alt='' />}
+        {!mobile && <img src='/images/header_image.svg' alt='ايقونة للعنوان' />}
       </h1>
       {showUpArrow && (
-        <FaArrowAltCircleUp
+        <FaArrowUp
           className={styles.upArrow}
           onClick={() => {
             window.scrollTo(0, 0);
