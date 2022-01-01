@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./style.module.scss";
 import { MdManageAccounts, MdShield } from "react-icons/md";
 import { FaTools } from "react-icons/fa";
 
 export default function WhyUs() {
   return (
-    <section className={styles.section1}>
+    <section className={styles.section1} id='WU'>
       <h2>
         <span>لماذا نحن ؟</span>
       </h2>

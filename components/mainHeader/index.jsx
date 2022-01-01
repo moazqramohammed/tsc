@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
 import { FaArrowAltCircleUp } from "react-icons/fa";
@@ -6,13 +6,18 @@ import { FaArrowAltCircleUp } from "react-icons/fa";
 export default function MainHeader() {
   const [mobile, setmobile] = useState(false);
   const [showUpArrow, setShowUpArrow] = useState(false);
-
+  // const scrollNav = useRef(null);
   useEffect(() => {
     if (window.innerWidth < 900) {
       setmobile(true);
     }
 
     window.addEventListener("scroll", () => {
+      // if (window.scrollY > 120) {
+      //   scrollNav.current.style.transform = "none";
+      // } else {
+      //   scrollNav.current.style.transform = "translateY(-100%)";
+      // }
       if (window.scrollY > window.innerHeight) {
         setShowUpArrow(true);
       } else {
@@ -56,7 +61,7 @@ export default function MainHeader() {
         />
         {!mobile && <img src='/images/header_image.svg' alt='' />}
       </h1>
-      {mobile && showUpArrow && (
+      {showUpArrow && (
         <FaArrowAltCircleUp
           className={styles.upArrow}
           onClick={() => {
@@ -75,6 +80,22 @@ export default function MainHeader() {
           className={styles.whatsapp}
         />
       </a>
+      {/* {!mobile && (
+        <div className={styles.scrollNav} ref={scrollNav}>
+          <ul>
+            <li>
+              <Link href={"/"}>
+                <a>خدماتنا</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/"}>
+                <a>اطلب شاحنة</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )} */}
     </header>
   );
 }
