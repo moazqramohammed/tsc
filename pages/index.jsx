@@ -42,7 +42,6 @@ export default function Home() {
           { href: "order_truck", text: "طلب شاحنة" },
         ]}
       />
-      <span className={styles.mm}>محمد الموسى نتمنى لك زواجاً قريباً </span>
     </div>
   );
 }
