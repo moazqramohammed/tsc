@@ -20,7 +20,20 @@ const index = () => {
         />
       </Head>
       <MainHeader />
-      <MainFooter />
+
+      <section>
+        <header>
+          <h1>الخدمات التي نقدمها</h1>
+        </header>
+      </section>
+
+      <MainFooter
+        content={[{ href: "OS", text: "الخدمات التي نقدمها" }]}
+        pages={[
+          { href: " ", text: "الرئيسية" },
+          { href: "order_truck", text: "طلب شاحنة" },
+        ]}
+      />
     </div>
   );
 };

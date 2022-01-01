@@ -30,6 +30,21 @@
       }
     }
   }
+  .mm {
+    position: fixed;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.8);
+    padding: 180px 10px 10px;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: xxx-large;
+    color: white;
+    font-weight: 800;
+  }
 }
 
 @media screen and (max-width: 450px) {
