@@ -38,7 +38,7 @@
     background-color: white;
     border-radius: 120px 120px 0 0;
     overflow: hidden;
-    div {
+    > div {
       flex: 1;
       &:first-of-type {
         form {
@@ -47,9 +47,9 @@
           align-items: stretch;
           padding: 40px 60px;
 
-          ul {
+          > ul {
             list-style: none;
-            li {
+            > li {
               position: relative;
               input {
                 padding: 12px;
@@ -57,7 +57,7 @@
                 font-size: large;
                 width: 100%;
               }
-              span {
+              > span {
                 abbr {
                   text-decoration: none;
                 }
@@ -67,6 +67,29 @@
                 left: 5px;
                 color: red;
                 font-size: x-large;
+                z-index: 6;
+              }
+              .numberSpan {
+                top: -3px;
+              }
+              .numberInput {
+                margin: 1vw 0;
+                * {
+                  direction: ltr;
+                  text-align: right;
+                }
+                input {
+                  padding: 30px;
+                  border: 1px solid #767676;
+                  &:focus {
+                    border: 2px solid;
+                  }
+                }
+                .dropButton {
+                  left: 0;
+                  padding: 0;
+                  z-index: 5;
+                }
               }
             }
           }
@@ -93,12 +116,12 @@
       position: relative;
 
       background: none;
-      div {
+      > div {
         &:first-of-type {
           form {
             padding: 50px 20px;
           }
-          li {
+          > li {
             margin: 20px 0;
           }
         }
