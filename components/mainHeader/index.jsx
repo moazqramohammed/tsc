@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
 import { FaArrowUp } from "react-icons/fa";
+import Image from "next/image";
 
 export default function MainHeader({ NotMain, page }) {
   const [mobile, setmobile] = useState(false);
@@ -93,11 +94,21 @@ export default function MainHeader({ NotMain, page }) {
       </ul>
       <h1>
         <span>مؤسسة الخطوط الأرضية</span> <span>للخدمات اللوجستية</span>
-        <img
-          src='/images/logo_without_map.png'
-          alt='لوغو مؤسست الخطوط الأرضية للخدمات اللوجستية '
-        />
-        {!mobile && <img src='/images/header_image.svg' alt='ايقونة للعنوان' />}
+        <div>
+          <Image
+            src='/images/logo_without_map.png'
+            alt='لوغو مؤسست الخطوط الأرضية للخدمات اللوجستية '
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
+        {/* {!mobile && (
+          <Image
+            layout='fill'
+            src='/images/header_image.svg'
+            alt='ايقونة للعنوان'
+          />
+        )} */}
       </h1>
       {showUpArrow && (
         <FaArrowUp
@@ -111,11 +122,13 @@ export default function MainHeader({ NotMain, page }) {
         href='https://aljeri.com/owa/ar/%D8%A7%D9%84%D8%AC%D8%B1%D9%8A-%D9%84%D9%84%D9%86%D9%82%D9%84%D9%8A%D8%A7%D8%AA/'
         target='_blank'
         rel='noreferrer'
+        className={styles.whatsapp}
       >
-        <img
-          src='\images\whatsapp.svg'
+        <Image
+          width={"60px"}
+          height={"60px"}
+          src='/images/whatsapp.svg'
           alt='ايقونة الواتساب'
-          className={styles.whatsapp}
         />
       </a>
       {/* {!mobile && (

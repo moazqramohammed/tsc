@@ -8,12 +8,14 @@
   h1 {
     z-index: 1;
     width: 380px;
-    height: 90px;
+    height: 157px;
     padding-top: 20px;
     position: relative;
     text-align: right;
     color: #002748;
-    span {
+    background-color: white;
+    box-shadow: 3px 6px 5px #0000003d;
+    > span {
       &:first-of-type {
         font-size: xx-large;
       }
@@ -21,20 +23,38 @@
         font-size: x-large;
       }
     }
-    img {
-      &:last-of-type {
-        position: absolute;
-        left: -0px;
-        top: 0;
-        height: 168px;
-        z-index: -1;
-      }
-      &:first-of-type {
-        position: absolute;
-        left: 30px;
-        top: 77px;
-        height: 70px;
-      }
+    div {
+      position: absolute;
+      left: 30px;
+      top: 77px;
+      height: 70px;
+      width: 140px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -89px;
+      top: 0px;
+      filter: blur(2px);
+      border-width: 0px 0px 157px 85px;
+      border-style: solid;
+      border-color: black black transparent #0000003d;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -85px;
+      top: 0;
+      border-width: 0px 0px 157px 85px;
+      border-style: solid;
+      border-color: black black transparent white;
+      z-index: 1;
     }
   }
   > ul {
@@ -57,6 +77,8 @@
   }
   .whatsapp {
     width: 60px;
+    height: 60px;
+    display: block;
     position: fixed;
     left: 40px;
     bottom: 20px;
@@ -122,7 +144,7 @@
       width: initial;
       height: auto;
       text-align: center;
-      img {
+      div {
         left: 50% !important;
         transform: translatex(-120%);
         top: 105px !important;

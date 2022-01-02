@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Head from "next/head";
+
 import MainHeader from "../../components/mainHeader";
 import MainFooter from "../../components/mainFooter";
 import styles from "../../styles/order_truck.module.scss";
@@ -22,6 +24,18 @@ const OrderTruck = () => {
 
   return (
     <div>
+      <Head>
+        <title>طلب شاحنة - مؤسسة الخطوط الأرضية للخدمات اللوجستية</title>
+        <meta
+          name='description'
+          content='طلب شاحنة لنقل البضائع من مؤسسة الخطوط الأرضية للخدمات اللوجستية ، لطلب نقل مواد أولية أو لطلب نقل بضائع أو لطلب نقل نفط'
+        />
+        <link
+          rel='shortcut icon'
+          href='/images/logo_without_map_noBG.png'
+          type='image/x-icon'
+        />
+      </Head>
       <MainHeader NotMain={true} page={"truck_order"} />
       <main className={styles.mainTO}>
         <h1>
@@ -144,6 +158,7 @@ const OrderTruck = () => {
             />
           </div>
         </div>
+        <div>*</div>
       </main>
       <MainFooter
         content={[{ href: "OT", text: "طلب شاحنة" }]}
