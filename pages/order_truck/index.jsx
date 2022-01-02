@@ -19,7 +19,7 @@ const formData = {
 };
 const index = () => {
   const [update, setUpdate] = useState(0);
-  const [number, setNumber] = useState("");
+
   return (
     <div>
       <MainHeader NotMain={true} page={"truck_order"} />
