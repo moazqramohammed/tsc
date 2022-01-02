@@ -21,7 +21,7 @@ const index = () => {
       </Head>
       <MainHeader NotMain={true} page={"services"} />
 
-      <section className={styles.services} id='OS'>
+      <main className={styles.services} id='OS'>
         <h1>الخدمات التي نقدمها :</h1>
         <ul>
           <li id='BT'>
@@ -77,7 +77,7 @@ const index = () => {
             </div>
           </li>
         </ul>
-      </section>
+      </main>
 
       <MainFooter
         content={[{ href: "OS", text: "الخدمات التي نقدمها" }]}

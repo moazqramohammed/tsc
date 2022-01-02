@@ -64,6 +64,9 @@ export default function MainHeader({ NotMain, page }) {
                 </Link>
               </li>
               <li>
+                <span>/</span>
+              </li>
+              <li>
                 <Link href={"/services"}>
                   <a>خدماتنا</a>
                 </Link>

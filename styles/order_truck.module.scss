@@ -1,0 +1,120 @@
+.mainTO {
+  margin-bottom: 200px;
+  h1 {
+    color: #002748;
+    text-align: center;
+    font-size: xx-large;
+    margin: 100px;
+    span {
+      transition: 0.5s;
+      position: relative;
+      padding-bottom: 16px;
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        width: 40%;
+        height: 5px;
+        background-color: #002748;
+
+        transition: 0.5s;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    border-radius: 120px 120px 0 0;
+    overflow: hidden;
+    div {
+      flex: 1;
+      &:first-of-type {
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          padding: 40px 60px;
+
+          ul {
+            list-style: none;
+            li {
+              position: relative;
+              input {
+                padding: 12px;
+                margin: 1vw 0;
+                font-size: large;
+                width: 100%;
+              }
+              span {
+                abbr {
+                  text-decoration: none;
+                }
+                display: block;
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                color: red;
+                font-size: x-large;
+              }
+            }
+          }
+          > input {
+            padding: 12px;
+            margin: 15px 0;
+            font-size: large;
+            width: 60%;
+          }
+        }
+      }
+      &:last-of-type {
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mainTO {
+    .container {
+      border-radius: 0;
+      width: 100%;
+      position: relative;
+
+      background: none;
+      div {
+        &:first-of-type {
+          form {
+            padding: 50px 20px;
+          }
+          li {
+            margin: 20px 0;
+          }
+        }
+        &:last-of-type {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          img {
+            height: 100%;
+            width: 100%;
+            filter: blur(2px);
+          }
+        }
+      }
+    }
+  }
+}
