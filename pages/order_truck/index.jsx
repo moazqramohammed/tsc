@@ -17,7 +17,7 @@ const formData = {
   number: "",
   email: "",
 };
-const index = () => {
+const OrderTruck = () => {
   const [update, setUpdate] = useState(0);
 
   return (
@@ -156,4 +156,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default OrderTruck;
