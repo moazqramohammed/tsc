@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
+import Image from "next/image";
 
 const MainFooter = ({ content, pages }) => {
   return (
@@ -8,8 +9,11 @@ const MainFooter = ({ content, pages }) => {
       <div>
         <a href='mailto:mmotrajy@gmail.com'>info@landlines-sa.com</a>
         <a href='https://wa.me/qr/STYNHG2E6FEIP1'>
-          <img
-            src='images/باركود الواتساب.png'
+          <Image
+            objectFit='cover'
+            height={"320px"}
+            width={"300px"}
+            src='/images/باركود الواتساب.png'
             alt='باركود الواتساب لمؤسسة الخطوط الأرضية للخدمات اللوجستية'
           />
         </a>
@@ -59,10 +63,15 @@ const MainFooter = ({ content, pages }) => {
         ))}
 
         <li>
-          <img
-            src='images/logo.png'
-            alt='لوغو مؤسسة الخطوط الأرضية للخدمات اللوجستية'
-          />
+          <div>
+            <Image
+              layout='responsive'
+              height={"400px"}
+              width={"500px"}
+              src='/images/logo.png'
+              alt='لوغو مؤسسة الخطوط الأرضية للخدمات اللوجستية'
+            />
+          </div>
         </li>
       </ul>
     </footer>

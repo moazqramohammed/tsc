@@ -41,7 +41,7 @@
       &:first-of-type {
         font-size: x-large;
       }
-      img {
+      div {
         max-width: 90vw;
         width: 300px;
         margin-right: -5vw;
@@ -76,6 +76,9 @@
       width: 100%;
       li {
         width: auto;
+        div {
+          margin: auto;
+        }
       }
     }
   }
