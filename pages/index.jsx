@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.main}>
       <Head>
         <title>اسم الشركة</title>
-        <meta name='description' content='وصف الشركة' />
+        <meta name="description" content="وصف الشركة" />
       </Head>
       <MainHeader />
       <FrontView />

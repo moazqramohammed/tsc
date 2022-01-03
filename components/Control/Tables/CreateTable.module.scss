@@ -1,0 +1,40 @@
+.table {
+  margin: auto;
+  font-size: x-small;
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+  thead tr {
+    font-weight: bold;
+    background-color: white;
+  }
+  tbody tr:nth-child(2n + 1) {
+    background-color: wheat;
+  }
+  tbody tr:nth-child(2n) {
+    background-color: white;
+  }
+}
+@media screen and (min-width: 320px) {
+  .table {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 426px) {
+  .table {
+    border-collapse: separate;
+    font-size: normal;
+    td {
+      padding: 15px 30px;
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .table {
+    font-size: medium;
+    td {
+      padding: 20px 40px;
+    }
+  }
+}

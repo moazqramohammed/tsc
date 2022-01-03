@@ -1,0 +1,113 @@
+.form {
+  top: 50px;
+  min-width: 250px;
+  margin: auto;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 50px 15px 0 20px;
+  * {
+    width: 100%;
+    display: block;
+  }
+  h2 {
+    padding: 10px 0;
+  }
+  input {
+    outline: none;
+  }
+  label:not(:first-child) {
+    padding-top: 10px;
+  }
+  .submitBtn {
+    margin-top: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #606060;
+    color: white;
+  }
+}
+@media screen and (min-width: 426px) {
+  .form {
+    padding: 10px;
+    max-width: 550px;
+    padding: 10px 20px 20px 20px;
+  }
+  .submitBtn {
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 769px) {
+  .form {
+    position: relative;
+    top: 0;
+    padding: 20px 15px;
+    background-color: #ddd;
+    max-width: 850px;
+    display: grid;
+    grid-column-gap: 60px;
+    box-shadow: 0px 0px 10px 1px #aaa;
+    grid-template-areas:
+      "h h"
+      "l1 l2"
+      "i1 i2"
+      "l3 l4"
+      "i3 i4"
+      "l5 l6"
+      "i5 i6"
+      "s s ";
+    h2 {
+      padding: 0;
+      grid-area: h;
+    }
+    label {
+      text-align: right;
+    }
+    .label1 {
+      grid-area: l1;
+    }
+    .label2 {
+      grid-area: l2;
+    }
+    .label3 {
+      grid-area: l3;
+    }
+    .label4 {
+      grid-area: l4;
+    }
+    .label5 {
+      grid-area: l5;
+    }
+    .label6 {
+      grid-area: l6;
+    }
+    .input1 {
+      grid-area: i1;
+    }
+    .input2 {
+      grid-area: i2;
+    }
+    .input3 {
+      grid-area: i3;
+    }
+    .input4 {
+      grid-area: i4;
+    }
+    .input5 {
+      grid-area: i5;
+    }
+    .input6 {
+      grid-area: i6;
+    }
+    .submitBtn {
+      grid-area: s;
+    }
+    .submitBtn {
+      max-width: 250px;
+      padding: 5px 0;
+      position: absolute;
+      top: 40px;
+      right: 60px;
+    }
+  }
+}

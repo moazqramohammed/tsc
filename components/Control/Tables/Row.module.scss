@@ -1,0 +1,28 @@
+.editDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  span {
+    flex-grow: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  :first-child:hover {
+    color: green;
+  }
+  span:hover {
+    color: red;
+  }
+  :first-child::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 40%;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: #aaa;
+  }
+}

@@ -1,0 +1,17 @@
+.fo {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #b0b0b0;
+  input {
+    outline: none;
+    padding: 2px;
+  }
+}

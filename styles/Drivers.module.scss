@@ -1,0 +1,30 @@
+.header {
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  padding-top: 50px;
+}
+.content {
+  width: 100vw;
+  margin: auto;
+  overflow: scroll;
+  padding: 20px 0;
+  td {
+    font-size: x-small;
+    padding: 4px;
+    min-width: 80px;
+  }
+}
+@media screen and(min-width: 426px) {
+  .content {
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .content {
+    td {
+      font-size: small;
+      padding: 8px;
+    }
+  }
+}
