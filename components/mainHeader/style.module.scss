@@ -1,18 +1,21 @@
 .header {
-  position: fixed;
   width: 100%;
   background-color: #002748;
   box-shadow: 0px 1px 9px black;
   height: 100px;
   display: flex;
+
   h1 {
+    z-index: 1;
     width: 380px;
-    height: 90px;
+    height: 157px;
     padding-top: 20px;
     position: relative;
     text-align: right;
     color: #002748;
-    span {
+    background-color: white;
+    box-shadow: 3px 6px 5px #0000003d;
+    > span {
       &:first-of-type {
         font-size: xx-large;
       }
@@ -20,20 +23,38 @@
         font-size: x-large;
       }
     }
-    img {
-      &:last-of-type {
-        position: absolute;
-        left: -5px;
-        top: 0;
-        height: 168px;
-        z-index: -1;
-      }
-      &:first-of-type {
-        position: absolute;
-        left: 30px;
-        top: 77px;
-        height: 70px;
-      }
+    div {
+      position: absolute;
+      left: 30px;
+      top: 77px;
+      height: 70px;
+      width: 140px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -89px;
+      top: 0px;
+      filter: blur(2px);
+      border-width: 0px 0px 157px 85px;
+      border-style: solid;
+      border-color: black black transparent #0000003d;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -85px;
+      top: 0;
+      border-width: 0px 0px 157px 85px;
+      border-style: solid;
+      border-color: black black transparent white;
+      z-index: 1;
     }
   }
   > ul {
@@ -56,10 +77,57 @@
   }
   .whatsapp {
     width: 60px;
+    height: 60px;
+    display: block;
     position: fixed;
     left: 40px;
     bottom: 20px;
+    z-index: 5;
   }
+  .upArrow {
+    width: 60px;
+    height: auto;
+    position: fixed;
+    color: white;
+    background: #162870;
+    border-radius: 50px;
+    padding: 10px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    box-shadow: 5px 10px 7px -2px #0000008a;
+    cursor: pointer;
+  }
+  // .scrollNav {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   height: 70px;
+  //   width: 100%;
+  //   z-index: 1;
+  //   background-color: #002748;
+  //   transition: 0.5s;
+  //   transform: translateY(-100%);
+  //   ul {
+  //     width: 80%;
+  //     margin: auto;
+  //     list-style: none;
+  //     display: flex;
+  //     height: 100%;
+  //     align-items: stretch;
+  //     li {
+  //       a {
+  //         display: inline-block;
+  //         height: 100%;
+  //         color: white;
+  //         padding: 0 20px;
+  //         font-size: x-large;
+  //         line-height: 70px;
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (max-width: 900px) {
@@ -76,12 +144,14 @@
       width: initial;
       height: auto;
       text-align: center;
-      img {
-        left: 30px !important;
+      div {
+        left: 50% !important;
+        transform: translatex(-120%);
         top: 105px !important;
         height: 75px !important;
         z-index: 1 !important;
       }
+
       span {
         &:last-of-type {
           font-size: large;
@@ -111,15 +181,7 @@
       padding: 15px 0;
     }
   }
-  .upArrow {
-    width: 60px;
-    height: auto;
-    position: fixed;
-    color: #002748;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0.8;
-  }
+
   .whatsapp {
     width: 80px !important;
     left: 10px !important;
