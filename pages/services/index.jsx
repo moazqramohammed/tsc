@@ -34,7 +34,12 @@ const index = () => {
               </p>
             </div>
             <div>
-              <img src='/images/برميل-بترول.svg' alt='ايقونة منتجات بترولية' />
+              <img
+                width={"400px"}
+                height={"400px"}
+                src='/images/برميل-بترول.svg'
+                alt='ايقونة منتجات بترولية'
+              />
             </div>
           </li>
 
@@ -47,7 +52,12 @@ const index = () => {
               </p>
             </div>
             <div>
-              <img src='/images/كيس-اسمنت.svg' alt='ايقونة منتجات بترولية' />
+              <img
+                width={"400px"}
+                height={"400px"}
+                src='/images/كيس-اسمنت.svg'
+                alt='ايقونة منتجات بترولية'
+              />
             </div>
           </li>
 
@@ -60,7 +70,12 @@ const index = () => {
               </p>
             </div>
             <div>
-              <img src='/images/بضائع.svg' alt='ايقونة منتجات بترولية' />
+              <img
+                width={"400px"}
+                height={"400px"}
+                src='/images/بضائع.svg'
+                alt='ايقونة منتجات بترولية'
+              />
             </div>
           </li>
 
@@ -73,7 +88,12 @@ const index = () => {
               </p>
             </div>
             <div>
-              <img src='/images/صناديق.svg' alt='ايقونة منتجات بترولية' />
+              <img
+                width={"400px"}
+                height={"400px"}
+                src='/images/صناديق.svg'
+                alt='ايقونة منتجات بترولية'
+              />
             </div>
           </li>
         </ul>
