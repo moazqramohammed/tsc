@@ -18,25 +18,34 @@ const HEADER_ROW = [
   { name: "برنت", id: 14 },
   { name: "التأمين", id: 15 },
   { name: "تاريخ انتهاء الصلاحية", id: 16 },
+  { name: "تعديل أو حذف", id: 17 },
 ];
 const CamionsList = () => {
-  const [drivers, setDrivers] = useState([]);
+  const [camions, setCamions] = useState([]);
+  const [deleteValue, doDelete] = useState(false);
+
   useEffect(async () => {
     try {
-      const { data } = await axios.get("../api/admin/drivers");
-      await setDrivers(
-        data.drivers.map((e) => {
+      const { data } = await axios.get("../api/admin/camions");
+      await setCamions(
+        data.camions.map((e) => {
           return [
-            e.driverName,
-            e.cardNumber,
-            e.cardCopy,
-            e.generatePlace,
-            e.generateDate.slice(0, 10),
-            e.driverNationality,
-            "1232 AZO",
-            e.driverReligion,
-            e.workBoss,
-            e.driverPhone,
+            e.owner,
+            e.driverCardNumber,
+            e.chassisNo,
+            e.plateNumber,
+            e.camionMarket,
+            e.camionWieght,
+            e.camionColor,
+            e.serialNumber,
+            e.loginType,
+            e.camionModel,
+            e.camionLoad,
+            e.madeDate,
+            e.businessCard,
+            e.prent,
+            e.insurance,
+            e.finishedDate,
             e.id,
           ];
         })
@@ -44,9 +53,16 @@ const CamionsList = () => {
     } catch (error) {
       return error;
     }
-  }, []);
+  }, [deleteValue && deleteValue]);
   return (
-    <CreateTable headerRow={HEADER_ROW} otherRows={drivers} editDelete={true} />
+    <CreateTable
+      headerRow={HEADER_ROW}
+      otherRows={camions}
+      editDelete={true}
+      doDelete={doDelete}
+      deleteValue={deleteValue}
+      adminRout="camions"
+    />
   );
 };
 

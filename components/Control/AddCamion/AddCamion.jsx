@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import Input from "../Input/Input";
 import styles from "./AddCamion.module.scss";
 const AddCamionForm = () => {
@@ -20,15 +21,36 @@ const AddCamionForm = () => {
     businessCard: "",
     prent: "",
     insurance: "",
+    finishedDate: "",
   });
+  const [updateId, setUpdateId] = useState(null);
   const router = useRouter();
   const submitHandeling = async (e) => {
     e.preventDefault();
-    await axios.post("../api/admin/camions", { ...camionData });
+    if (!updateId) {
+      await axios.post("../api/admin/camions", { ...camionData });
+    } else {
+      const { data } = await axios.put("../api/admin/camions", {
+        ...camionData,
+      });
+    }
     router.push("camions");
   };
+  useEffect(async () => {
+    if (localStorage.getItem("editCamion")) {
+      const { data } = await axios.get("../api/admin/camions");
+      const currentCamion = data.camions.filter(
+        (e) => e.id === Number(localStorage.getItem("editCamion"))
+      );
+      await setCamionData({
+        ...currentCamion[0],
+      });
+      await setUpdateId(localStorage.getItem("editCamion"));
+      localStorage.removeItem("editCamion");
+    }
+  }, []);
   return (
-    <form className={styles.form} onSubmit={submitHandeling}>
+    <form className={styles.form} onSubmit={submitHandeling} autoSave="disaple">
       <h2>إضافة شاحنة</h2>
       <Input
         id={styles.input1}
@@ -159,6 +181,15 @@ const AddCamionForm = () => {
         _value={camionData.insurance}
         handel={(e) =>
           setCamionData({ ...camionData, insurance: e.target.value })
+        }
+      />
+      <Input
+        id={styles.input16}
+        label="تاريخ انتهاء الصلاحية"
+        type="date"
+        _value={camionData.finishedDate}
+        handel={(e) =>
+          setCamionData({ ...camionData, finishedDate: e.target.value })
         }
       />
       <Input id={styles.submit} type="submit" />

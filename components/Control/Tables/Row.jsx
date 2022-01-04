@@ -1,18 +1,21 @@
 import styles from "./Row.module.scss";
 import { useRouter } from "next/router";
 
-const Row = ({ element, editDelete, _id, onDelete }) => {
-  let cur = 0;
+const Row = ({ element, editDelete, _id, onDelete, adminRout }) => {
   const router = useRouter();
   const editHandel = async (e) => {
-    await localStorage.setItem("editDriver", `${_id}`);
-    router.push("add-driver");
+    if (adminRout === "drivers") {
+      await localStorage.setItem("editDriver", `${_id}`);
+      router.push("add-driver");
+    } else if (adminRout === "camions") {
+      await localStorage.setItem("editCamion", `${_id}`);
+      router.push("add-camion");
+    }
   };
   return (
     <tr>
-      {element.map((e) => {
-        cur++;
-        return <td key={cur}>{e}</td>;
+      {element.map((e, index) => {
+        return <td key={index}>{e}</td>;
       })}
       {editDelete && (
         <td className={styles.editDelete}>

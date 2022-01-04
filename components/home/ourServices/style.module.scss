@@ -1,0 +1,108 @@
+.OurServices {
+  margin: 200px 0;
+  > div {
+    width: 710px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      " main auto auto"
+      " main auto auto";
+    justify-content: center;
+    gap: 30px;
+    > div {
+      width: 200px;
+      height: 200px;
+      background: white;
+      box-shadow: 0px 5px 6px -4px black;
+      img {
+        &:not(.Main) {
+          width: 60%;
+          margin: 40px;
+        }
+      }
+      div {
+        display: none;
+      }
+      &:first-of-type {
+        grid-area: main;
+        height: auto;
+        width: 250px;
+        height: 430px;
+        padding: 20px 40px 0;
+        div {
+          display: block;
+        }
+        p {
+          padding: 10px 0px 25px;
+        }
+        button {
+          padding: 5px 15px;
+        }
+      }
+      transition: 0.1s;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        img:not(.Main) {
+          display: none;
+        }
+        div:not(.Main) {
+          display: block;
+          h3 {
+            padding: 20px;
+          }
+          p {
+            padding: 0 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .OurServices {
+    > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      > div:not(.Main) {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        padding: 0 0 0 10px;
+
+        img {
+          flex: 1;
+          margin: 0;
+          width: 40%;
+        }
+        div {
+          flex: 3;
+          display: block;
+          background: white;
+          padding-right: 10px;
+          h3 {
+            padding: 20px;
+          }
+          p {
+            padding: 0 15px;
+          }
+        }
+        &:hover {
+          img {
+            display: inline;
+          }
+        }
+      }
+      > div.Main {
+        width: 90%;
+        height: auto;
+        padding: 40px;
+        img {
+        }
+      }
+    }
+  }
+}

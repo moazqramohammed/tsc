@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="914.429" height="327.95" viewBox="0 0 914.429 327.95">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="915.429" height="327.95" viewBox="0 0 915.429 327.95">
   <defs>
-    <filter id="Path_1" x="0" y="0" width="914.429" height="327.95" filterUnits="userSpaceOnUse">
+    <filter id="Path_1" x="1" y="0" width="914.429" height="327.95" filterUnits="userSpaceOnUse">
       <feOffset dy="14" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feFlood flood-opacity="0.161"/>
@@ -8,7 +8,10 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_1)">
-    <path id="Path_1-2" data-name="Path 1" d="M896.429,0H0V304.95H738.727Z" transform="translate(9)" fill="#fff"/>
+  <g id="Group_18" data-name="Group 18" transform="translate(-92 -304)">
+    <g transform="matrix(1, 0, 0, 1, 92, 304)" filter="url(#Path_1)">
+      <path id="Path_1-2" data-name="Path 1" d="M896.429,0H0V304.95H738.727Z" transform="translate(10)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_25" data-name="Rectangle 25" width="34" height="305" transform="translate(92 304)" fill="#fff"/>
   </g>
 </svg>

@@ -48,7 +48,7 @@ const AddDriverForm = () => {
   }, []);
 
   return (
-    <form className={styles.form} onSubmit={submitHandeling}>
+    <form className={styles.form} onSubmit={submitHandeling} autoSave="disaple">
       <h2>إضافة سائق</h2>
       <Input
         id={styles.input1}

@@ -16,6 +16,7 @@ const HEADER_ROW = [
 ];
 const DriversList = () => {
   const [drivers, setDrivers] = useState([]);
+  const [deleteValue, doDelete] = useState(false);
   useEffect(async () => {
     try {
       const { data } = await axios.get("../api/admin/drivers");
@@ -39,9 +40,16 @@ const DriversList = () => {
     } catch (error) {
       return error;
     }
-  }, []);
+  }, [deleteValue && deleteValue]);
   return (
-    <CreateTable headerRow={HEADER_ROW} otherRows={drivers} editDelete={true} />
+    <CreateTable
+      headerRow={HEADER_ROW}
+      otherRows={drivers}
+      editDelete={true}
+      doDelete={doDelete}
+      deleteValue={deleteValue}
+      adminRout="drivers"
+    />
   );
 };
 export default DriversList;

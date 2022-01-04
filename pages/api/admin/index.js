@@ -1,15 +1,6 @@
-import nc from "next-connect";
 import jwt from "jsonwebtoken";
-
-const handler = nc({
-  onError: (err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).end("Something broke!");
-  },
-  onNoMatch: (req, res, next) => {
-    res.status(404).end("Page is not found");
-  },
-}).post(async (req, res) => {
+import connect from "../../../next-connect/next-connect";
+const API = connect().post(async (req, res) => {
   const { name, password } = req.body;
 
   if (name === process.env.ADMIN_NAME) {
@@ -27,4 +18,4 @@ const handler = nc({
   }
 });
 
-export default handler;
+export default API;
